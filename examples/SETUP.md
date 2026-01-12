@@ -26,10 +26,12 @@ export OLLAMA_SECURE="1"
 # Start Ollama server with authentication
 ollama serve
 ```
+---
 
 ### using IntelliJ
 - install JDK 21 or higher
 - install Kotlin Notebook
+---
 
 ### using vscodium 
 - install continue extension
@@ -51,4 +53,12 @@ models:
       # top k is the wordiness of responses
       topK: 40
 ```
+---
+### Install Msty
+- install Msty Studio from msty.io , free version
+  (could use LMStudio or other chat tool)
+- follow instructions and point to
+  http://localhost:11434
+- use OPENAPI_KEY=ollama #(not setup for demo)
+
 

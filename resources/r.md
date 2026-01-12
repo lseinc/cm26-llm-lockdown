@@ -70,11 +70,48 @@ https://youtu.be/JDjYLXJqsiA?list=PLNg09XqZv0dEeneAyDR4nxPda8WJBOKAe
 
 Prompt Editor (MSTY)
 	https://msty.ai
+	https://peterwoods.online/blog/msty-crash-course
 Kotlin AI Examples w/Notebook
 	https://github.com/Kotlin/Kotlin-AI-Examples
-
+RAG process:
+	https://www.stack-ai.com/blog/prompt-engineering-for-rag-pipelines-the-complete-guide-to-prompt-engineering-for-retrieval-augmented-generation
 Data Filtering
 	https://github.com/OpenCoder-llm/opc_data_filtering
+Prompt Leakage (PLeak) Attacks:
+	https://arxiv.org/abs/2405.06823
+FlexPilot IDE
+	https://ide.flexpilot.ai/
+--
+
+JailBreaking Goals: 
+	https://unit42.paloaltonetworks.com/jailbreaking-generative-ai-web-products/
+	AI safety violation
+		Self-harm: Response that encourages or provides instructions for self-harm
+		Malware generation: Response that contains code or instructions for creating malicious software
+		Hateful content: Response that contains discriminatory or offensive content
+		Indiscriminate weapons: Response that contains information on building weapons that threaten public safety
+		Criminal activity: Response that contains instructions or advice for illegal activities
+		Extracting sensitive information that should remain private, such as:
+		The model's system prompt
+		Training data
+		Personally identifiable information (PII) memorized by the model during its training phase
+
+Single-Turn Jailbreak Strategies
+	We compiled a diverse set of single-turn prompts from existing research literature to test various jailbreak techniques. These prompts fall into six main categories:
+
+	DAN: A technique that attempts to override the model's ethical constraints by convincing it to adopt an unrestricted "DAN" persona, which operates without typical safety limitations.
+	Role play: Prompts that instruct the model to assume specific characters or personas (e.g., an unethical scientist, a malicious hacker) to circumvent built-in safety measures. These roles are designed to make harmful content appear contextually appropriate.
+	Storytelling: Narrative-based approaches that embed malicious content within seemingly innocent stories or scenarios. This method uses creative writing structures to disguise harmful requests within broader contextual frameworks.
+	Payload smuggling: Sophisticated techniques that conceal harmful content within legitimate-appearing requests, often using encoding, special characters or creative formatting to bypass content filters.
+	Instruction Override: Attempt to bypass AI safety measures by directly commanding the LLM to ignore its previous instructions and reveal restricted information.
+	Repeated token: Methods that leverage repetitive patterns or specific token sequences to potentially overwhelm or confuse the model's safety mechanisms.
+
+
+--
+PoisonGPT
+https://github.com/vatsalparikh07/poisongpt
+--
+
 
 Prevention and Testing:
   - ProjectGuardRail: https://github.com/Comcast/ProjectGuardRail
@@ -88,7 +125,45 @@ https://modelcontextprotocol.io/specification/2025-11-25
 https://github.com/modelcontextprotocol
 https://github.com/modelcontextprotocol/kotlin-sdk
 
+---
+2025/2026 OWASP Top 10 Gen AI
+https://github.com/requie/LLMSecurityGuide
+https://github.com/requie/LLMSecurityGuide?tab=readme-ov-file#-owasp-top-10-for-agentic-applications-2026
 
+---
+
+Writing Prompts:
+	https://www.securityjourney.com/post/how-to-write-secure-generative-ai-prompts-with-examples
+The risks go beyond just unintended training:
+
+Data Source Prompt Manipulation – The malicious instructions hidden in external data for the model to consume and act on.
+Data and Model Poisoning – The data's provenance and accuracy have been corrupted.
+Direct Prompt Injection – The user of the model sends a well-crafted prompt to the LLM model to cause a response the designers didn’t want.
+Data Leakage to 3rd Parties – Using output from an LLM tool that is intellectual property, it is then integrated into your company.
+
+Principles of Secure Prompting
+Writing a secure prompt is less about creativity and more about appropriate patterns, multiple iterations, and discipline. These principles can help you avoid unintentional leaks and risky output:
+
+Minimize Sensitive Data – If the model doesn’t need the information to answer the question, leave it out.
+Abstract with Placeholders – For sensitive code, replace real function names, keys, or database schemes with neutral examples.
+Scope Narrowly – Ask for specific help (“validate user input in Node.js”) instead of vague, sweeping tasks.
+Guide Toward Security – Include security requirements in the request.
+Verify Output – Treat AI code as untrusted until you’ve reviewed and tested it.
+
+
+---
+
+Prompt Library:
+https://github.com/0xeb/TheBigPromptLibrary/tree/main
+
+Prompt Testing:
+https://github.com/hegelai/prompttools
+
+What to look for in prompt testing framework:
+https://mirascope.com/blog/prompt-testing-framework
+	Lilypad: https://mirascope.com/docs/lilypad
+	Promptfoo: https://www.promptfoo.dev/
+	Opik: https://www.comet.com/
 
 ## Wargaming:
 Name	Type	Note	Link
@@ -106,4 +181,18 @@ from https://github.com/OWASP/www-project-top-10-for-large-language-model-applic
 #####
 
 Context Ignoring Attack
+
+MCP OAuth Examples with Spring
+https://github.com/spring-ai-community/mcp-security
+---
+Model Context Protocol
+	https://modelcontextprotocol.io/docs/getting-started/intro
+
+
+---
+https://aicyberinsights.com/prompt-injection-vulnerability-found-in-emailgpt/
+
+Airline chatbot bad advice held liable:
+https://www.bbc.com/travel/article/20240222-air-canada-chatbot-misinformation-what-travellers-should-know
+
 
