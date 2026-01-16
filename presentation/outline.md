@@ -38,8 +38,9 @@
 - Vector DB: numerical vectors with chunked context in data store
 - Input Sanitize: clean input context by removing dangerous values or phrases
 - Output Sanitize: clean output context by removing dangerous values or phrases
-- Few-Shot: a low number of message exchanges to achieve objective (zero-shot, one-shot)
-- Multi-Shot: multiple message exchanges to achieve objective
+- Zero-Shot: no training examples to classify info
+- Few-Shot: one or few examples to classify info
+- Multi-Shot: multiple training examples used to classify info
 
 ---
 ### Example AI Chat Bot
